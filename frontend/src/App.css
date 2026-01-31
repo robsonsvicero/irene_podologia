@@ -155,12 +155,12 @@ main {
   margin-top: 60px;
 }
 
-/* Buttons - Sharp Rectangular Design */
+/* Buttons - Rounded Design */
 .btn-primary {
   background: transparent;
   color: var(--interactive-base);
   border: 1px solid var(--interactive-base);
-  border-radius: 0px;
+  border-radius: 10px;
   padding: 18px 32px;
   min-width: 200px;
   font-size: 15px;
@@ -394,12 +394,14 @@ main {
   position: relative;
   height: 600px;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .hero-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .hero-image-overlay {
@@ -421,6 +423,7 @@ main {
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  border-radius: 10px;
 }
 
 .about-image:hover {
@@ -464,7 +467,7 @@ main {
 .product-card {
   background: var(--bg-primary);
   border: 1px solid var(--border-light);
-  border-radius: 0px;
+  border-radius: 10px;
   padding: 40px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   cursor: default;
@@ -530,7 +533,7 @@ main {
   padding: 40px;
   background: var(--bg-secondary);
   border: 1px solid var(--border-light);
-  border-radius: 0px;
+  border-radius: 10px;
 }
 
 .rating-number {
@@ -561,7 +564,7 @@ main {
 .review-card {
   background: var(--bg-secondary);
   border: 1px solid var(--border-light);
-  border-radius: 0px;
+  border-radius: 10px;
   padding: 32px;
   position: relative;
   transition: transform 0.25s ease;
@@ -653,7 +656,7 @@ main {
   padding: 32px;
   background: var(--bg-primary);
   border: 1px solid var(--border-light);
-  border-radius: 0px;
+  border-radius: 10px;
 }
 
 .location-icon-wrapper {
@@ -665,6 +668,7 @@ main {
   justify-content: center;
   background: var(--bg-secondary);
   border: 1px solid var(--border-light);
+  border-radius: 10px;
 }
 
 .location-reference {
@@ -704,6 +708,7 @@ main {
   height: 600px;
   border: 1px solid var(--border-light);
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .location-map iframe {
@@ -745,7 +750,7 @@ main {
 .contact-form-wrapper {
   background: var(--bg-secondary);
   border: 1px solid var(--border-light);
-  border-radius: 0px;
+  border-radius: 10px;
   padding: 48px;
 }
 
@@ -770,7 +775,7 @@ main {
 .form-textarea {
   padding: 16px;
   border: 1px solid var(--border-medium);
-  border-radius: 0px;
+  border-radius: 10px;
   background: var(--bg-primary);
   color: var(--text-primary);
   font-size: 15px;

@@ -25,13 +25,6 @@ const Hero = () => {
       <div className="container">
         <div className="grid-two-column">
           <div className="hero-content">
-            <div className="hero-badge">
-              <div className="rating-stars">
-                {renderStars()}
-              </div>
-              <span className="rating-text">5,0 com 50 avaliações no Google</span>
-            </div>
-            
             <h1 className="hero-large">
               Podologia profissional com mais de 10 anos de confiança e excelência
             </h1>
