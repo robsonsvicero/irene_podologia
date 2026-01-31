@@ -1067,6 +1067,32 @@ main {
   .rating-number {
     font-size: 42px;
   }
+  
+  .blog-grid,
+  .blog-grid-full {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .blog-post-title {
+    font-size: 28px;
+  }
+  
+  .blog-post-meta {
+    gap: 16px;
+  }
+  
+  .blog-post-content {
+    font-size: 16px;
+  }
+  
+  .blog-post-content h3 {
+    font-size: 22px;
+  }
+  
+  .blog-post-cta {
+    padding: 32px 24px;
+  }
 }
 
 /* Smooth Scrolling */
