@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, Quote } from 'lucide-react';
+import { Star } from 'lucide-react';
 import { reviewsData } from '../mock/reviewsData';
 
 const Reviews = () => {
@@ -39,7 +39,6 @@ const Reviews = () => {
                   </div>
                 </div>
               </div>
-              <Quote className="review-quote-icon" size={24} />
               <p className="review-text body-regular">{review.text}</p>
               <span className="review-date body-small">
                 {new Date(review.date).toLocaleDateString('pt-BR', {
