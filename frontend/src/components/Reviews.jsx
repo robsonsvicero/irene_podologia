@@ -3,6 +3,22 @@ import { Star } from 'lucide-react';
 import { reviewsData } from '../mock/reviewsData';
 
 const Reviews = () => {
+  const renderStars = (count) => {
+    const stars = [];
+    for (let i = 0; i < count; i++) {
+      stars.push(<Star key={i} size={14} fill="#333333" stroke="#333333" />);
+    }
+    return stars;
+  };
+
+  const renderRatingStars = () => {
+    const stars = [];
+    for (let i = 0; i < 5; i++) {
+      stars.push(<Star key={i} size={24} fill="#333333" stroke="#333333" />);
+    }
+    return stars;
+  };
+
   return (
     <section id="reviews" className="section-padding reviews-section">
       <div className="container">
@@ -14,9 +30,7 @@ const Reviews = () => {
             <div className="reviews-rating">
               <div className="rating-number">{reviewsData.rating.toFixed(1)}</div>
               <div className="rating-stars-large">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={24} fill="#333333" stroke="#333333" />
-                ))}
+                {renderRatingStars()}
               </div>
               <div className="rating-count body-small">
                 Baseado em {reviewsData.totalReviews} avaliações do Google
@@ -33,9 +47,7 @@ const Reviews = () => {
                 <div className="review-author-info">
                   <h4 className="review-author body-regular">{review.author}</h4>
                   <div className="review-rating">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Star key={i} size={14} fill="#333333" stroke="#333333" />
-                    ))}
+                    {renderStars(review.rating)}
                   </div>
                 </div>
               </div>
