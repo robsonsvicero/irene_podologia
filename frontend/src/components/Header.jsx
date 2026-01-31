@@ -31,12 +31,13 @@ const Header = () => {
   };
 
   const navItems = [
-    { label: 'Início', section: 'home' },
-    { label: 'Sobre', section: 'about' },
-    { label: 'Serviços', section: 'services' },
-    { label: 'Avaliações', section: 'reviews' },
-    { label: 'Localização', section: 'location' },
-    { label: 'Contato', section: 'contact' }
+    { label: 'Início', section: 'home', isRoute: false },
+    { label: 'Sobre', section: 'about', isRoute: false },
+    { label: 'Serviços', section: 'services', isRoute: false },
+    { label: 'Avaliações', section: 'reviews', isRoute: false },
+    { label: 'Blog', section: '/blog', isRoute: true },
+    { label: 'Localização', section: 'location', isRoute: false },
+    { label: 'Contato', section: 'contact', isRoute: false }
   ];
 
   return (
@@ -52,12 +53,18 @@ const Header = () => {
             <ul>
               {navItems.map((item) => (
                 <li key={item.section}>
-                  <button
-                    onClick={() => scrollToSection(item.section)}
-                    className="navigation-link"
-                  >
-                    {item.label}
-                  </button>
+                  {item.isRoute ? (
+                    <Link to={item.section} className="navigation-link">
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <button
+                      onClick={() => scrollToSection(item.section)}
+                      className="navigation-link"
+                    >
+                      {item.label}
+                    </button>
+                  )}
                 </li>
               ))}
             </ul>
@@ -88,12 +95,18 @@ const Header = () => {
             <ul>
               {navItems.map((item) => (
                 <li key={item.section}>
-                  <button
-                    onClick={() => scrollToSection(item.section)}
-                    className="mobile-nav-link"
-                  >
-                    {item.label}
-                  </button>
+                  {item.isRoute ? (
+                    <Link to={item.section} className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <button
+                      onClick={() => scrollToSection(item.section)}
+                      className="mobile-nav-link"
+                    >
+                      {item.label}
+                    </button>
+                  )}
                 </li>
               ))}
             </ul>
