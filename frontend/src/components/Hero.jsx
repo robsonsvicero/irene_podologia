@@ -12,6 +12,14 @@ const Hero = () => {
     }
   };
 
+  const renderStars = () => {
+    const stars = [];
+    for (let i = 0; i < 5; i++) {
+      stars.push(<Star key={i} size={16} fill="#333333" stroke="#333333" />);
+    }
+    return stars;
+  };
+
   return (
     <section id="home" className="hero-section">
       <div className="container">
@@ -19,9 +27,7 @@ const Hero = () => {
           <div className="hero-content">
             <div className="hero-badge">
               <div className="rating-stars">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={16} fill="#333333" stroke="#333333" />
-                ))}
+                {renderStars()}
               </div>
               <span className="rating-text">5,0 com 50 avaliações no Google</span>
             </div>
