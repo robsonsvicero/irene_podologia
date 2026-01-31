@@ -1,5 +1,6 @@
 // Mock data para avaliações do Google - será substituído por integração real no backend
-export const reviewsData = {
+
+const reviewsData = {
   rating: 5.0,
   totalReviews: 50,
   reviews: [
@@ -54,7 +55,7 @@ export const reviewsData = {
   ]
 };
 
-export const servicesData = [
+const servicesData = [
   {
     id: 1,
     title: "Avaliação Podológica",
@@ -92,3 +93,5 @@ export const servicesData = [
     icon: "Calendar"
   }
 ];
+
+export { reviewsData, servicesData };
